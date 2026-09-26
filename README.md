@@ -8,6 +8,7 @@ A simple il2cpp dumper using frida with no dependencies. Since unity version var
 ```
 frida -U -f com.DefaultCompany.Game -l dump.ts
 ```
+After that call the `dump()` function
 
 ## Import to IDA
 There is also a script to import the `dump.cs` to IDA. Just use the Script File `ida-import-unity-dump.py` and locate the generated dump file.
