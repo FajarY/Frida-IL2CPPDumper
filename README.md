@@ -72,3 +72,6 @@ typedef struct EventInfo
 Also some functions are generated especially when checking modifiers, just keep in mind that maybe those logic can be wrong. Good thing is from some testing it seems to generate valid answers when checked on whats actually on the csharp file. If you want to change it to actually reflect the real one, you can build your own unity project with all available modifiers and dump it to see the flags value for each methods, class, etc and then you map it.
 
 Also the ida import are slop, but its readable and can easily be modified if needed.
+
+## Warning
+Be ethical when using this tool, use only for authorized pentesting, ctf, or research purpose.
