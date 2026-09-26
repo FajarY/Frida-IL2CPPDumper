@@ -1,5 +1,5 @@
 # Frida-IL2CPPDumper
-A simple il2cpp dumper using frida with no dependencies. Since unity version varies and also protection added varies often times we need to change some logic on the dumper to accomodate the diffrence of unity version or to bypass the protection that is enforced on the application. This repo functions to just be the bare minimum template for dumping, since there is no dependencies you can just copy and paste the `dump.ts` script and change the logic according to your needs.
+A simple il2cpp dumper using frida with no dependencies. Since unity version varies and also protection added varies, often times we need to change some logic on the dumper to accomodate the diffrence of unity version or to bypass the protection that is enforced on the application. This repo functions to just be the bare minimum template for dumping, since there is no dependencies you can just copy and paste the `dump.ts` script and change the logic according to your needs.
 - Tested on Frida 17.9.8
 - Tested on Unity 6000.3.20f1 (Metadata version 39)
 - Tested on Android ARM64
@@ -36,7 +36,7 @@ function writeToFileInternal(name: String, data: String)
 
 There is also some usefull logs when certain il2cpp function fails, those may help in understanding if the app have some kind of protections.
 
-Also keep in mind that as unity version changes, the offset that may hold the name, va, and other variables may also change. You may need to change it also if that happens, for example when reading method offsets on events.
+Also keep in mind that as unity version changes, the offset that may hold the name, address pointer, and other variables may also change. You may need to change it also if that happens, for example when reading method offsets on events.
 ```
 let eventType = event.add(Process.pointerSize).readPointer()
 let eventTypeName = "?"
